@@ -13,7 +13,7 @@ apt update && apt upgrade
 
 apt-get install golang
 
-pip3 install -r requirements
+pip install -r requirements.txt
 
 python3 crxffddos.py
 
