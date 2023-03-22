@@ -781,6 +781,7 @@ username = input('\n\U0001F575 Enter your username: ')
 password = input('\n\U0001F575 Enter your password: ')
 
 # Get the device identifier
+device_id = str(uuid.getnode())
 # Execute a query to check if the user exists and the password is correct
 with connection.cursor() as cursor:
     query = f"SELECT * FROM tokens WHERE Username = '{username}' AND Password = '{password}'"
@@ -789,8 +790,11 @@ with connection.cursor() as cursor:
 
 # Check if the query returned a result
 if len(result) == 1:
-    # Check if the user is already logged in on another device
-  
+    # Update the database with the device identifier
+    with connection.cursor() as cursor:
+        query = f"UPDATE tokens SET DeviceID = '{device_id}' WHERE Username = '{username}' AND Password = '{password}'"
+        cursor.execute(query)
+        connection.commit()
 
         # Get the expiration date of the account
         end_date = result[0]['EndDate']
@@ -802,6 +806,7 @@ if len(result) == 1:
 
         if current_time > end_date:
             print('\033[91m' + 'Login expired' + '\033[0m')
+            exit()
         else:
            remaining_days = (end_date - current_time).days
            print('     Login successful!\n')
