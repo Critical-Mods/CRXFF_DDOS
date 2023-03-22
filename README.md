@@ -17,7 +17,7 @@ pip3 install -r requirements
 
 python3 crxffddos.py
 
-USERNAME AND PASSWORD WHICH I PROVIDED YOU
+Contact me for Username and Password
 
 **steps to use the script after logging in**
 
