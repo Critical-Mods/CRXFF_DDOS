@@ -744,9 +744,9 @@ def login():
 # Connect to the database
 try:
     connection = pymysql.connect(host='sql12.freemysqlhosting.net',
-                                 user='sql12607106',
-                                 password='8XyWk3bXkv',
-                                 db='sql12607106',
+                                 user='sql12619830',
+                                 password='YCvDkye4P6',
+                                 db='sql12619830',
                                  charset='utf8mb4',
                                  cursorclass=pymysql.cursors.DictCursor)
 except pymysql.err.OperationalError as e:
