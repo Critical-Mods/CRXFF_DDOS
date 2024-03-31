@@ -34,7 +34,7 @@ Contact me for Username and Password
 
 | Instagram handle |
 | ---------------- |
-|[@criticalofficial_hacker](https://www.instagram.com/criticalofficial_hacker/)
+|[@criticalofficial_modder](https://www.instagram.com/criticalofficial_modder/)
 
 DONT MISUSE THE SCRIPT DONT ATTACK ON.GOV WEBSITES
 
